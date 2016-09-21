@@ -1,0 +1,1 @@
+.EditingFormErrorLabel{color:red}

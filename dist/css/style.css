@@ -1,0 +1,473 @@
+@font-face {
+  font-family: 'ToyotaText-Regular';
+  src: url('../fonts/ToyotaText-Regular.eot?#iefix') format('embedded-opentype'), 
+  		url('../fonts/ToyotaText-Regular.woff') format('woff'), 
+   		url('../fonts/ToyotaText-Regular.ttf')  format('truetype'), 
+   		url('../fonts/ToyotaText-Regular.svg#ToyotaDisplay-Bold') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+  font-family: 'ToyotaText-Bold';
+  src: url('../fonts/ToyotaText-Bold.eot?#iefix') format('embedded-opentype'), 
+  		url('../fonts/ToyotaText-Bold.woff') format('woff'), 
+   		url('../fonts/ToyotaText-Bold.ttf')  format('truetype'), 
+   		url('../fonts/ToyotaText-Bold.svg#ToyotaDisplay-Bold') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+  font-family: 'ToyotaDisplay-Bold';
+  src: url('../fonts/ToyotaDisplay-Bold.eot?#iefix') format('embedded-opentype'), 
+  		url('../fonts/ToyotaDisplay-Bold.woff') format('woff'), 
+   		url('../fonts/ToyotaDisplay-Bold.ttf')  format('truetype'), 
+   		url('../fonts/ToyotaDisplay-Bold.svg#ToyotaDisplay-Bold') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+
+.hlt-go {
+	position: relative;
+    z-index: 5;
+    padding-top: 153px;
+    width: ;
+}
+
+.hlt-bnr {
+	background: url(../images/highlights/bg.jpg) no-repeat center top;
+	min-height: 887px;
+    position: absolute;
+}
+
+.hlt-go-container {
+    padding-bottom: 50px;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.hlt-go-container h1 {
+	margin: 0;
+}
+
+.hlt-go-container .logo {
+	background: url(../images/highlights/logo.png) no-repeat center top;
+	display: inline-block;
+	text-indent: -999em;
+	width: 445px;
+	height: 392px;
+}
+
+.hlt-go-container .date {
+	color: #fff;
+	font: 20px 'ToyotaText-Bold', sans-serif;
+	margin-top: 10px;
+}
+
+.hlt-go-container h2 {
+	color: #000;
+	font: 50px/56px 'ToyotaDisplay-Bold', sans-serif;
+	margin: 0;
+}
+
+.hlt-go-container p {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.hlt-go-container .bg-line {
+	background: url(../images/highlights/bg-line.png) no-repeat center top;
+	margin-top: 40px;
+	padding-top: 65px;
+}
+
+.hlt-go-container .bg-line h2 {
+	margin: 0 0 5px;
+}
+
+.hlt-go-container .video {
+	background: url(../images/highlights/bg-video.png) no-repeat center top;
+	margin-top: 12px;
+	height: 226px;
+	width: 313px;
+}
+
+.hlt-go-container .video iframe {
+	border: 0;
+	margin-left: 9px;
+    margin-top: 37px;
+}
+
+.hlt-go-container .map-directions {
+	margin-top: 20px;
+	position: relative;
+	width: 960px;
+}
+
+.hlt-go-container .map-directions .flex-viewport {
+	width: 760px;
+	margin-left: 100px;
+}
+
+.hlt-go-container .map-directions .slides li {
+	background: #ebebeb url(../images/highlights/bg-slide.jpg) no-repeat center bottom;
+	padding: 15px 20px;
+	width: 240px !important;
+	height: 160px;
+}
+
+.hlt-go-container .map-directions h3 {
+	color: #000;
+	font: 16px 'ToyotaText-Bold';
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+.hlt-go-container .map-directions .date,
+.hlt-go-container .map-directions .time {
+	color: #000;
+	font: 14px 'ToyotaText-Regular';
+	margin: 0;
+}
+
+.hlt-go-container .map-directions .direction-link {
+	margin-top: 10px;
+}
+
+.hlt-go-container .map-directions .direction-link a {
+	font-family: 'ToyotaText-Bold', sans-serif;
+}
+
+.hlt-go-container .map-directions .flex-direction-nav a {
+	background-color: #ebebeb;
+	background-image: url(../images/highlights/btn-slide.png);
+	position: absolute;
+    top: 0;
+	display: block;
+	text-indent: -999em;
+	width: 70px;
+	height: 160px;
+}
+
+.hlt-go-container .map-directions .flex-direction-nav a:focus {
+	outline: none;
+}
+
+.hlt-go-container .map-directions .flex-prev {
+	background-position: 0 0;
+	left: 10px;
+}
+
+.hlt-go-container .map-directions .flex-prev:hover {
+	background-position: 0 -160px;
+}
+
+.hlt-go-container .map-directions .flex-next {
+	background-position: -70px 0;
+	right: 10px;
+}
+
+.hlt-go-container .map-directions .flex-next:hover {
+	background-position: -70px -160px;
+}
+
+.hlt-go-container .row-reset {
+	margin-left: -8px;
+    margin-right: -8px;
+}
+
+.hlt-go-container .col-md-4 {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.hlt-go-container .activities .activities-overflow {
+	background: url(../images/highlights/bg-activities.jpg) no-repeat;
+	background-size: 100% 100%;
+	padding: 25px;
+	margin-top: 16px;
+	text-align: center;
+	display: table;
+	height: 320px;
+	overflow: hidden;
+}
+
+.hlt-go-container .activities .activities-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.hlt-go-container .activities .img {
+	margin-bottom: 15px;
+}
+
+.hlt-go-container .activities h3 {
+	font: 17px 'ToyotaText-Bold', sans-serif;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.hlt-go-container .activities h3,
+.hlt-go-container .activities p {
+	color: #000;
+	margin: 0
+}
+
+.hlt-go-container .activities p {
+	line-height: 18px;
+}
+
+.hlt-go-container .margin-top-15 {
+	margin-top: 15px;
+}
+
+.hlt-go-container .terms-conditions {
+	padding-top: 50px;
+}
+
+#google-maps {
+    height: 500px;
+    width: 500px;
+    margin: 0px;
+    padding: 0px
+}
+
+@media (max-width: 	1200px){
+	.hlt-go {background: }
+
+	.hlt-go-container {
+		width: 100%;
+	}
+
+	.hlt-go-container .video-bg,
+	.hlt-go-container .video-intro {
+		width: 100%;
+		text-align: center;
+	}
+
+  	.hlt-go-container .video {
+   		margin: 0 auto;
+  	}
+
+  	.hlt-go-container .bg-line {
+	    background-size: 100%;
+	}
+
+	.hlt-go-container .flexslider {
+		width: calc(970px - 140px);
+	}
+
+	.hlt-go-container .map-directions {
+		width: 100%;
+	}
+
+	.hlt-go-container .map-directions .flex-prev {
+    	left: 0;
+	}
+
+	.hlt-go-container .map-directions .flex-next {
+    	right: 0;
+	}
+
+	.hlt-go-container .activities li {
+		background-size: 100%;
+	}
+
+	.hlt-go-container .map-directions .slides li {
+		width: 193px !important;
+	}
+
+	.hlt-go-container .map-directions .flex-viewport {
+		margin-left: 90px;
+		width: 620px;
+	}
+}
+
+@media (max-width: 	992px){
+	.hlt-go {background: }
+
+	.hlt-go-container {
+		width: 100%;
+	}
+
+	.hlt-go-container .video-bg,
+	.hlt-go-container .video-intro {
+		width: 100%;
+		text-align: center;
+	}
+
+  	.hlt-go-container .video {
+   		margin: 0 auto;
+  	}
+
+  	.hlt-go-container .bg-line {
+	    background-size: 100%;
+	}
+
+	.hlt-go-container .flexslider {
+		width: 100%;
+	}
+
+	.hlt-go-container .map-directions {
+		width: 100%;
+	}
+
+	.hlt-go-container .map-directions .flex-prev {
+    	left: 0;
+	}
+
+	.hlt-go-container .map-directions .flex-next {
+    	right: 0;
+	}
+
+	.hlt-go-container .activities li {
+		background-size: 100%;
+	}
+
+	.hlt-go-container .map-directions .slides li {
+		width: 191px !important;
+	}
+
+	.hlt-go-container .map-directions .flex-viewport {
+		margin-left: 90px;
+		width: 490px;
+	}
+
+	.hlt-go-container .col-md-4 {
+		padding: 0;
+	}
+
+	.hlt-go-container .flex-control-paging {
+		margin: 20px 0 0;
+	    padding: 0;
+	    text-align: center;
+	}
+
+	.hlt-go-container .flex-control-paging li {
+		display: inline-block;
+    	margin: 0 8px;
+	}
+
+	.hlt-go-container .flex-control-paging a {
+		background: url(../images/highlights/dot.jpg);
+		text-indent: -999em;
+    	display: block;
+		width: 16px;
+		height: 16px;
+	}
+
+	.hlt-go-container .flex-control-paging a.flex-active {
+		background-position: right top; 
+	}
+
+	.hlt-go-container .activities .activities-overflow {
+		background: url(../images/highlights/bg-activities2.jpg) no-repeat;
+		width: 600px;
+		height: 620px;
+	}
+}
+
+@media (max-width: 767px){
+	.hlt-go {background: }
+
+	.hlt-go-container {
+		width: 100%;
+	}
+
+	.hlt-go-container .logo {
+		width: 450px;
+		max-width: 100%;
+	}
+
+	.hlt-go-container .video-bg,
+	.hlt-go-container .video-intro {
+		width: 100%;
+		text-align: center;
+	}
+
+  	.hlt-go-container .video {
+   		margin: 0 auto;
+  	}
+
+  	.hlt-go-container .bg-line {
+	    background-size: 100% 32px;
+	}
+
+	.hlt-go-container .flexslider {
+		width: 100%;
+	}
+
+	.hlt-go-container .map-directions {
+		width: 100%;
+	}
+
+	.hlt-go-container .map-directions .flex-prev {
+    	left: 0;
+	}
+
+	.hlt-go-container .map-directions .flex-next {
+    	right: 0;
+	}
+
+	.hlt-go-container .activities li {
+		background-size: 100%;
+	}
+
+	.hlt-go-container .map-directions .slides li {
+		width: 191px !important;
+	}
+
+	.hlt-go-container .map-directions .flex-viewport {
+		margin-left: 90px;
+		width: 490px;
+	}
+
+	.hlt-go-container .col-md-4 {
+		padding: 0;
+	}
+
+	.hlt-go-container .flex-control-paging {
+		margin: 20px 0 0;
+	    padding: 0;
+	    text-align: center;
+	}
+
+	.hlt-go-container .flex-control-paging li {
+		display: inline-block;
+    	margin: 0 8px;
+	}
+
+	.hlt-go-container .flex-control-paging a {
+		background: url(../images/highlights/dot.jpg);
+		text-indent: -999em;
+    	display: block;
+		width: 16px;
+		height: 16px;
+	}
+
+	.hlt-go-container .flex-control-paging a.flex-active {
+		background-position: right top; 
+	}
+
+	.hlt-go-container .activities .activities-overflow {
+		background: url(../images/highlights/bg-activities2.jpg) no-repeat;
+		width: 600px;
+		height: 620px;
+	}
+
+	.hlt-go-container .activities .flex-direction-nav {
+		display: none;
+	}
+}
+
+@media (max-width: 600px){
+	.hlt-go-container .activities .activities-overflow {
+		background-size: 100% 100%;
+		width: 100%;
+		height: 300px;
+	}
+}
+
+
+
