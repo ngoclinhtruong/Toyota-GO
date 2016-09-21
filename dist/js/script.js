@@ -7,6 +7,54 @@ $(document).ready(function(){
 	var array = [[{title:"1 Utama Linh", date:"date", time:"time", direction:"google.com"}, {title:"1 Utama", date:"date", time:"time", direction:"direction"}, {title:"1 Utama", date:"date", time:"time", direction:"google.com"}], 
 				[{title:"1 Utama", date:"date", time:"time", direction:"direction"}, {title:"1 Utama", date:"date", time:"time", direction:"direction"}, {title:"1 Utama", date:"date", time:"time", direction:"direction"}],
 				[{title:"1 Utama", date:"date", time:"time", direction:"direction"}, {title:"1 Utama", date:"date", time:"time", direction:"direction"}, {title:"1 Utama", date:"date", time:"time", direction:"direction"}]];
+	
+    var locations = [[
+      ['Bondi Beach', -33.890542, 151.274856, 4],
+      ['Coogee Beach', -33.923036, 151.259052, 5],
+      ['Cronulla Beach', -34.028249, 151.157507, 3],
+      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+      ['Maroubra Beach', -33.950198, 151.259302, 1]
+    ],
+    [
+      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+      ['Maroubra Beach', -33.950198, 151.259302, 1]
+    ],
+    [
+      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+      ['Coogee Beach', -33.923036, 151.259052, 5],
+      ['Maroubra Beach', -33.950198, 151.259302, 1]
+    ]
+   ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(-33.92, 151.25),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+	var markers = [];
+    var marker, i;
+
+    var iLocations = [];
+    for (i = 0; i < locations.length; i++) { 
+    	iLocations = locations[i];
+    	for (j = 0; j < iLocations.length; j++) {
+    		marker = new google.maps.Marker({
+	        position: new google.maps.LatLng(iLocations[j][1], iLocations[j][2]),
+	        map: map
+	      });
+
+	      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+	        return function() {
+	          infowindow.setContent(iLocations[i][0]);
+	          infowindow.open(map, marker);
+	        }
+      		})(marker, i));
+      		markers.push(marker);
+    	}   
+	}
+
 	$(".region").change(function() {
 		 var str = "";
 		 var selectedId = $( this ).attr("id");
@@ -37,5 +85,28 @@ $(document).ready(function(){
 		    itemWidth: 240,
 		    itemMargin: 20
 		});
+
+ 		var selectedPoints = locations[selectedIndex];
+		for (var i = 0; i < markers.length; i++) {
+		      markers[i].setMap(null);
+		   }
+		   markers = [];
+
+		for (i = 0; i < selectedPoints.length; i++) {  
+	      marker = new google.maps.Marker({
+	        position: new google.maps.LatLng(selectedPoints[i][1], selectedPoints[i][2]),
+	        map: map
+	      });
+
+	      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+	        return function() {
+	          infowindow.setContent(selectedPoints[i][0]);
+	          infowindow.open(map, marker);
+	        }
+      		})(marker, i));
+      markers.push(marker);
+    }
+
 	});
+		
 });
