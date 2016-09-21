@@ -31,8 +31,8 @@
 .hlt-go {
 	position: relative;
     z-index: 5;
-    padding-top: 153px;
-    width: ;
+    padding: 153px 0 0;
+    width: 100%;
 }
 
 .hlt-bnr {
@@ -42,7 +42,6 @@
 }
 
 .hlt-go-container {
-    padding-bottom: 50px;
     width: 960px;
     margin: 0 auto;
 }
@@ -65,8 +64,30 @@
 	margin-top: 10px;
 }
 
+.hlt-go-container .car-img {
+	margin-top: -50px;
+}
+
+.hlt-go-container .video-intro h2 {
+	font-size: 50px;
+	color: #ed1c24;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+
+.hlt-go-container .video-intro .txt {
+	background: #ed1c24;
+	padding: 5px 10px;
+	text-align: center;
+}
+
+.hlt-go-container .video-intro p {
+	color: #fff;
+	margin: 0;
+}
+
 .hlt-go-container h2 {
-	color: #000;
+	color: #58595b;
 	font: 50px/56px 'ToyotaDisplay-Bold', sans-serif;
 	margin: 0;
 }
@@ -97,6 +118,26 @@
 	border: 0;
 	margin-left: 9px;
     margin-top: 37px;
+}
+
+.hlt-go-container .region {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff url('../images/highlights/down-select.png') no-repeat right center;
+    border: #e1e1e1 solid 5px;
+    font-size: 16px;
+    text-indent: 0.01px;
+    text-overflow: "";
+    margin: 10px 0 20px;
+    padding-right: 35px;
+    padding-left: 25px;
+    width: 500px;
+    height: 60px;
+}
+
+.hlt-go-container .region:focus {
+	outline: none;
 }
 
 .hlt-go-container .map-directions {
@@ -237,7 +278,8 @@
 	.hlt-go {background: }
 
 	.hlt-go-container {
-		width: 100%;
+		width: calc(1120px - 140px);
+		margin: 0 auto;
 	}
 
 	.hlt-go-container .video-bg,
@@ -256,6 +298,10 @@
 
 	.hlt-go-container .flexslider {
 		width: calc(970px - 140px);
+	}
+
+	.road-tour {
+		width: calc(1120px - 140px);
 	}
 
 	.hlt-go-container .map-directions {

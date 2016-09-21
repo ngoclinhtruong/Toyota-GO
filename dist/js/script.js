@@ -34,7 +34,7 @@ $(document).ready(function(){
 
     var infowindow = new google.maps.InfoWindow();
 	var markers = [];
-    var marker, i;
+    var marker;
 
     var iLocations = [];
     for (i = 0; i < locations.length; i++) { 
@@ -55,6 +55,17 @@ $(document).ready(function(){
     	}   
 	}
 
+	function normalIcon() {
+      return {
+        url: 'http://1.bp.blogspot.com/_GZzKwf6g1o8/S6xwK6CSghI/AAAAAAAAA98/_iA3r4Ehclk/s1600/marker-green.png'
+      };
+    }
+    function highlightedIcon() {
+      return {
+        url: 'http://maps.google.com/intl/en_us/mapfiles/ms/micons/purple.png'
+      };
+    }
+
 	$(".region").change(function() {
 		 var str = "";
 		 var selectedId = $( this ).attr("id");
@@ -70,7 +81,7 @@ $(document).ready(function(){
 		$(".map-directions .slides").empty();
 		for (var i=0; i < selectedArray.length; i++) {
 			selectedItem = selectedArray[i];
-			html = "<li><h3>" + selectedItem["title"] + "</h3><p class='date'>Date: </p>" + selectedItem["date"] + "<p class='time'>Time: " + selectedItem["time"] + "</p><div class='direction-link'><a href='" + selectedItem["direction"] + "''>+ Direction to here</a></div></li>";
+			html = "<li class='active' id='01'><h3>" + selectedItem["title"] + "</h3><p class='date'>Date: </p>" + selectedItem["date"] + "<p class='time'>Time: " + selectedItem["time"] + "</p><div class='direction-link'><a href='" + selectedItem["direction"] + "''>+ Direction to here</a></div></li>";
 			$(".map-directions .slides").append(html);		
 		}
 		//$(".map-directions .slides").append(html);
@@ -97,16 +108,22 @@ $(document).ready(function(){
 	        position: new google.maps.LatLng(selectedPoints[i][1], selectedPoints[i][2]),
 	        map: map
 	      });
-
+	      marker.setIcon(normalIcon());
 	      google.maps.event.addListener(marker, 'click', (function(marker, i) {
 	        return function() {
 	          infowindow.setContent(selectedPoints[i][0]);
 	          infowindow.open(map, marker);
 	        }
       		})(marker, i));
-      markers.push(marker);
+    	markers.push(marker);
     }
 
 	});
 		
+	$(".map-directions .slides").on("click", "li.active", function(){
+    	marker.setIcon(normalIcon());
+    	var index = $(this).index();
+    	marker = markers[index];
+    	marker.setIcon(highlightedIcon());
+});
 });
